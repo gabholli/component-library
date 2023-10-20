@@ -25,11 +25,13 @@ body {
 .badges-container {
   padding-left: 2.875em;
   display: grid;
-  grid-template: 125px auto auto / 150px auto auto;
+  grid-template: repeat(5, auto) / repeat(3, auto);
   grid-template-areas:
     ". heading ."
-    "square-text squares squares"
-    "pill-text pills pills";
+    ". square-text ."
+    ". squares ."
+    ". pill-text ."
+    ". pills ."
 }
 
 .badges-heading {
@@ -56,6 +58,7 @@ body {
   display: flex;
   gap: 1.5em;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .square-badges-container {

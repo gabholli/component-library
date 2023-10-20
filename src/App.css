@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  src: url("./fonts/PermanentMarker-Regular.ttf");
+  font-family: Permanent Marker;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  src: url("./fonts/Inter-Regular.ttf");
+  font-family: Inter;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Permanent Marker;
+}
+
+/* Badges rules */
+
+.badges-container {
+  padding-left: 2.875em;
+  display: grid;
+  grid-template: 125px auto auto / 150px auto auto;
+  grid-template-areas:
+    ". heading ."
+    "square-text squares squares"
+    "pill-text pills pills";
+}
+
+.badges-heading {
+  grid-area: heading;
+  color: #000;
+  font-family: Permanent Marker;
+  font-size: 2.75rem;
+  font-style: normal;
+  font-weight: 400;
+  /* padding-left: 2.875em; */
+  justify-self: left;
+}
+
+.square-text {
+  grid-area: square-text;
+}
+
+.pill-text {
+  grid-area: pill-text;
+}
+
+.square-badges-container,
+.pill-badges-container {
   display: flex;
-  flex-direction: column;
+  gap: 1.5em;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.square-badges-container {
+  grid-area: squares;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pill-badges-container {
+  grid-area: pills;
+}
+
+.square-badge,
+.pill-badge {
+  font-family: Inter;
+  border-radius: 4px;
+  /* background-color: red; */
+}
+
+.badge-text {
+  padding: 0.125em 0.75em;
+  font-size: 0.875rem;
+  font-weight: 500;
 }

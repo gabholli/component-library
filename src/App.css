@@ -185,7 +185,7 @@ body {
     max-width: 1000px;
     /* padding: 2.875em; */
     display: grid;
-    grid-template: 125px auto auto/ 1fr 1fr 1fr 1fr 1fr;
+    grid-template: 125px auto auto/ 200px 1fr 1fr 1fr 1fr;
     grid-template-areas:
       ". banner-heading banner-heading . ."
       ". multi-heading multi-heading . ."

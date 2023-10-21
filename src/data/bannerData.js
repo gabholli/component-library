@@ -1,6 +1,6 @@
 const multiLineBanners = [
     {
-        class: "success",
+        heading: "Success",
         title: "Congratulations!",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.",
         backgroundColor: "#ECFDF5",
@@ -8,7 +8,7 @@ const multiLineBanners = [
         textColor: "#047857"
     },
     {
-        class: "warning",
+        heading: "Warning",
         title: "Attention",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum.",
         backgroundColor: "#FFFBEB",
@@ -16,7 +16,7 @@ const multiLineBanners = [
         textColor: "#B45309"
     },
     {
-        class: "error",
+        heading: "Error",
         title: "There is a problem with your application",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum.",
         backgroundColor: "#FEF2F2",
@@ -24,7 +24,7 @@ const multiLineBanners = [
         textColor: "#B45309"
     },
     {
-        class: "success",
+        heading: "Neutral",
         title: "Update available",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.",
         backgroundColor: "#EFF6FF",
@@ -36,15 +36,27 @@ const multiLineBanners = [
 const singleLineBanners = [
     {
         title: "Congratulations!",
+        backgroundColor: "#ECFDF5",
+        titleColor: "#065F46",
+        textColor: "#047857"
     },
     {
-        title: "Attention"
+        title: "Attention",
+        backgroundColor: "#FFFBEB",
+        titleColor: "#92400E",
+        textColor: "#B45309"
     },
     {
-        title: "There is a problem with your application"
+        title: "There is a problem with your application",
+        backgroundColor: "#FEF2F2",
+        titleColor: "#92400E",
+        textColor: "#B45309"
     },
     {
-        title: "Update available"
+        title: "Update available",
+        backgroundColor: "#EFF6FF",
+        titleColor: "#1E40AF",
+        textColor: "#1C51B9"
     }
 ]
 

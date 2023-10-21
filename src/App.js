@@ -4,17 +4,8 @@ import { Banner } from './components/Banner'
 
 function App() {
 
-  // const badgeColorsMap = badgeColors.map((color, index) => {
-  //   return (
-  //     <Badges
-  //       key={index}
-  //       color={color}
-  //     />
-  //   )
-  // })
-
   return (
-    <div className="App">
+    <div className="app">
       <Badges />
       <Banner />
     </div>

@@ -20,10 +20,19 @@ body {
   font-family: Permanent Marker;
 }
 
+/* Main container rules */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
 /* Badges rules */
 
 .badges-container {
-  padding: 2.875em;
+  padding: 0 2.875em;
   display: grid;
   grid-template: repeat(5, auto) / repeat(3, auto);
   grid-template-areas:
@@ -36,6 +45,10 @@ body {
 
 .badges-heading {
   grid-area: heading;
+}
+
+.badges-heading,
+.banner-heading {
   color: #000;
   font-family: Permanent Marker;
   font-size: 2.75rem;
@@ -95,10 +108,67 @@ body {
 
 /* Banners rules */
 
+.banner-container {
+  padding: 0 1em;
+  display: grid;
+  grid-template: repeat(3, auto) / 1fr;
+  grid-template-areas:
+    "banner-heading"
+    "multi-heading"
+    "multi";
+}
+
+.banner-heading {
+  grid-area: banner-heading;
+}
+
+.multi-line-heading {
+  grid-area: multi-heading;
+}
+
+.multi-subcontainer {
+  grid-area: multi;
+}
+
+.banner-subheading,
+.multi-line-heading {
+  text-align: center;
+  font-family: Permanent Marker;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 63px;
+}
+
+.multi-content {
+  border-radius: 6px;
+  max-width: 890px;
+  height: auto;
+  padding: 1em;
+}
+
+.content-title,
+.content-text {
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 20px
+}
+
+.content-title {
+  font-weight: 500;
+}
+
+.content-text {
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {}
+
 @media (min-width: 1024px) {
   .badges-container {
     max-width: 1000px;
-    /* padding: 2.875em; */
+    padding: 2.875em;
     display: grid;
     grid-template: 125px auto auto/ 150px auto auto;
     grid-template-areas:
@@ -110,4 +180,39 @@ body {
   .badges-heading {
     justify-self: right;
   }
+
+  .banner-container {
+    max-width: 1000px;
+    /* padding: 2.875em; */
+    display: grid;
+    grid-template: 125px auto auto/ 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      ". banner-heading banner-heading . ."
+      ". multi-heading multi-heading . ."
+      "multi multi multi multi multi";
+  }
+
+  .banner-heading,
+  .multi-line-heading {
+    justify-self: left;
+  }
+
+  .banner-subheading {
+    grid-area: subheading;
+    margin-right: 1em;
+  }
+
+  .multi-content {
+    grid-area: container;
+  }
+
+  .multi-content-container {
+    padding: 0 2.875em;
+    max-width: 900px;
+    display: grid;
+    grid-template: auto / 150px auto auto;
+    grid-template-areas: "subheading container container";
+  }
+
+
 }

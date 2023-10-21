@@ -93,6 +93,8 @@ body {
   font-weight: 500;
 }
 
+/* Banners rules */
+
 @media (min-width: 1024px) {
   .badges-container {
     max-width: 1000px;

@@ -1,5 +1,6 @@
 import './App.css'
 import { Badges } from "./components/Badges"
+import { Banner } from './components/Banner'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <Badges />
+      <Banner />
     </div>
   )
 }

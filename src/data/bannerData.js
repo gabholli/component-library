@@ -37,26 +37,22 @@ const singleLineBanners = [
     {
         title: "Congratulations!",
         backgroundColor: "#ECFDF5",
-        titleColor: "#065F46",
-        textColor: "#047857"
+        titleColor: "#065F46"
     },
     {
         title: "Attention",
         backgroundColor: "#FFFBEB",
-        titleColor: "#92400E",
-        textColor: "#B45309"
+        titleColor: "#92400E"
     },
     {
         title: "There is a problem with your application",
         backgroundColor: "#FEF2F2",
-        titleColor: "#92400E",
-        textColor: "#B45309"
+        titleColor: "#92400E"
     },
     {
         title: "Update available",
         backgroundColor: "#EFF6FF",
-        titleColor: "#1E40AF",
-        textColor: "#1C51B9"
+        titleColor: "#1E40AF"
     }
 ]
 

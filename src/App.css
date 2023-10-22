@@ -111,11 +111,13 @@ body {
 .banner-container {
   padding: 0 1em;
   display: grid;
-  grid-template: repeat(3, auto) / 1fr;
+  grid-template: repeat(5, auto) / 1fr;
   grid-template-areas:
     "banner-heading"
     "multi-heading"
-    "multi";
+    "multi"
+    "single-heading"
+    "single";
 }
 
 .banner-heading {
@@ -131,24 +133,45 @@ body {
 }
 
 .banner-subheading,
-.multi-line-heading {
+.multi-line-heading,
+.single-heading {
   text-align: center;
   font-family: Permanent Marker;
-  font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: 63px;
 }
 
-.multi-content {
+.banner-subheading {
+  font-size: 1.5rem;
+}
+
+.single-heading,
+.multi-line-heading {
+  font-size: 2rem;
+}
+
+.multi-content,
+.single-content {
   border-radius: 6px;
   max-width: 890px;
-  height: auto;
   padding: 1em;
 }
 
+.multi-content {
+  height: auto;
+}
+
+.single-content {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
 .content-title,
-.content-text {
+.content-text,
+.single-title {
   font-family: Inter;
   font-size: 0.875rem;
   font-style: normal;
@@ -161,6 +184,14 @@ body {
 
 .content-text {
   font-weight: 400;
+}
+
+.single-heading {
+  grid-area: single-heading;
+}
+
+.single-subcontainer {
+  grid-area: single;
 }
 
 @media (min-width: 768px) {}
@@ -181,29 +212,32 @@ body {
     justify-self: right;
   }
 
+  /* .banner-container {
+    padding: 0 1em;
+    display: grid;
+    grid-template: repeat(5, auto) / 1fr;
+    grid-template-areas:
+      "banner-heading"
+      "multi-heading"
+      "multi"
+      "single-heading"
+      "single";
+  } */
   .banner-container {
     max-width: 1000px;
     /* padding: 2.875em; */
     display: grid;
-    grid-template: 125px auto auto/ 1fr 1fr 1fr 1fr 1fr;
+    grid-template: 125px auto auto/ 180px 1fr 1fr 1fr 1fr;
     grid-template-areas:
       ". banner-heading banner-heading . ."
-      ". multi-heading multi-heading . ."
-      "multi multi multi multi multi";
+      ". multi-heading multi-heading . single-heading"
+      "multi multi multi multi single";
   }
 
   .banner-heading,
-  .multi-line-heading {
+  .multi-line-heading,
+  .single-heading {
     justify-self: left;
-  }
-
-  .banner-subheading {
-    grid-area: subheading;
-    margin-right: 1em;
-  }
-
-  .multi-content {
-    grid-area: container;
   }
 
   .multi-content-container {
@@ -215,5 +249,28 @@ body {
     margin-bottom: 1em;
   }
 
+  .banner-subheading {
+    grid-area: subheading;
+    margin-right: 1em;
+  }
+
+  .multi-content {
+    grid-area: container;
+  }
+
+  .single-subcontainer {
+    display: grid;
+    grid-template: repeat(4, auto) / 1fr;
+  }
+
+  .single-content-container {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .single-content {
+    height: 50px;
+    width: 400px;
+  }
 
 }

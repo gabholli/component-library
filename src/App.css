@@ -216,6 +216,10 @@ body {
   border-radius: 8px;
 }
 
+.card:hover {
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10);
+}
+
 .card-icon {
   position: absolute;
   top: 0;

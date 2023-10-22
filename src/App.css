@@ -65,7 +65,8 @@ body {
 
 .square-text,
 .pill-text {
-  justify-self: center;
+  justify-self: right;
+  margin-right: 1em;
 }
 
 .square-text {
@@ -295,6 +296,7 @@ body {
   .banner-subheading {
     grid-area: subheading;
     margin-right: 1em;
+    justify-self: right;
   }
 
   .multi-content {

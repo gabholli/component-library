@@ -212,19 +212,8 @@ body {
     justify-self: right;
   }
 
-  /* .banner-container {
-    padding: 0 1em;
-    display: grid;
-    grid-template: repeat(5, auto) / 1fr;
-    grid-template-areas:
-      "banner-heading"
-      "multi-heading"
-      "multi"
-      "single-heading"
-      "single";
-  } */
   .banner-container {
-    max-width: 1000px;
+    max-width: 1400px;
     /* padding: 2.875em; */
     display: grid;
     grid-template: 125px auto auto/ 180px 1fr 1fr 1fr 1fr;
@@ -242,7 +231,6 @@ body {
 
   .multi-content-container {
     padding: 0 2.875em;
-    max-width: 900px;
     display: grid;
     grid-template: auto / 130px auto auto;
     grid-template-areas: "subheading container container";

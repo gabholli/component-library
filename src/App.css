@@ -479,3 +479,15 @@ body {
   }
 
 }
+
+@media (min-width: 1440px) {
+  .testimonial-image {
+    height: 464px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .testimonial-image {
+    height: 400px;
+  }
+}

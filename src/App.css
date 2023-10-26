@@ -97,13 +97,20 @@ body {
 .square-badge,
 .pill-badge {
   font-family: Inter;
-  border-radius: 4px;
   height: 24px;
   width: 66px;
   display: flex;
   align-items: center;
   justify-content: center;
   /* background-color: red; */
+}
+
+.square-badge {
+  border-radius: 4px;
+}
+
+.pill-badge {
+  border-radius: 12px;
 }
 
 .badge-text {
